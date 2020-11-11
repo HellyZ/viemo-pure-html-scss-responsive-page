@@ -1,0 +1,50 @@
+@import '_mixins';
+@import '_theme';
+
+footer {
+    position: relative;
+    height: auto;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: $footerBgColor;
+        & > div {
+            margin: 20px;
+            & > span {
+                font-weight: 700;
+            }
+        }
+
+        & > .social {
+           & > ul {
+                display: flex;
+                justify-content: center;
+
+                & li {
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    & .footer-copyright {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        font-family: $fontFamily;
+        font-size: 9px;
+        line-height: 24px;
+        height: auto;
+        color: #000000;
+        background: $footerBgColor;
+    }
+}

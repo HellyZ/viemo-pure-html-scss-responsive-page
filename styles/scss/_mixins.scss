@@ -1,0 +1,74 @@
+@import '_theme';
+
+
+@mixin nav {
+    font: {
+        family: $fontFamily;
+        size: 12px;
+    }
+
+    color: $colorWhite;
+}
+
+@mixin headings {
+    font: {
+        family: $fontFamily;
+        size: calc(18px + 1.5vw);
+    }
+
+    text: {
+        // transform: uppercase;
+        align: center;
+    }
+
+    color: $colorWhite;
+}
+
+@mixin text {
+    font: {
+        family: $fontFamily;
+        size: calc(12px + .5vw);
+    }
+
+    color: $colorText;
+    line-height: normal;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+@mixin buttons {
+    background-color: $buttonLabelPrimary;
+    color: $buttonPrimary;
+    border: none;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+
+    &:hover {
+        background-color: #d45f4f;
+    }
+}
+
+@mixin flexparent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+@mixin flexchild {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    width: 100vw;
+}
+
+@mixin section-control {
+    height: 32px;
+    border-radius: 3px;
+    margin: 6px;
+}

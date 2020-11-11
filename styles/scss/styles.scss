@@ -1,0 +1,46 @@
+@import '_mixins';
+@import '_theme';
+@import '_header';
+@import '_mobile';
+@import '_section';
+@import '_footer';
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: $fontFamily;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+
+.content {
+    max-width: 1440px;
+    min-width: 360px;
+  }
+
+  html:not([data-scroll='0']) {
+      body .location {
+          visibility: hidden;
+      }
+      header {
+          background-color: $colorWhite;
+         
+          margin-top: 0;
+          #menuToggle span {
+              background-color: black;
+          }
+          img {
+              content: url("/images/icons/basket2.svg");
+          }
+          .logo a,
+          .fa-search,
+          .wide-screen a
+           {
+            color: black;
+           }
+          }
+      }

@@ -1,0 +1,96 @@
+@import '_mixins';
+@import '_theme';
+
+
+
+button {
+    @include buttons();
+}
+
+.location {
+    position: fixed;
+    height: 24px;
+    z-index: 10;
+    background-color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    span {
+        margin: 0 20px;
+    }
+
+    a {
+        position: absolute;
+        margin: 0 20px;
+        right: 0;
+        left: auto;
+
+        &:link {
+            text-decoration: none;
+            color: #000000;
+        }
+    }
+}
+
+.top {
+    @include flexparent();
+
+    position: relative;
+    flex-flow: row nowrap;
+    object-fit: cover;
+    box-sizing: border-box;
+    margin-top: 0;
+    height: 768px;
+    background: url('../images/hero.jpg') no-repeat center;
+    background-size: cover;
+
+    .box {
+        text-align: center;
+        width: 100%;
+    }
+
+    h1 {
+        @include headings();
+        color: $footerBgColor;
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 90px;
+    }
+}
+
+.middle {
+    padding: 32px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    line-height: 18px;
+    background: $colorWhite;
+    flex-direction: column;
+
+    p {
+        font-family: 'Poppins', serif;
+        font-style: normal;
+        margin: auto;
+    }
+
+    .form {
+        @include flexparent();
+        input {
+            border: 1px solid #E1E0E1;
+            box-sizing: border-box;
+            @include section-control;
+            width: 334px;
+        }
+
+        button {
+            @include section-control;
+            background: #000000;
+
+            color: $colorWhite;
+            width: 140px;
+
+        }
+    }
+
+}
